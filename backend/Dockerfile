@@ -1,6 +1,9 @@
 # Use an official lightweight Python image
 FROM python:3.10-slim
 
+# Force Python stdout and stderr streams to be unbuffered
+ENV PYTHONUNBUFFERED=1
+
 # Install system dependencies required by OpenCV and MediaPipe
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -8,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglx-mesa0 \
     libglib2.0-0 \
     libgles2 \
+    libegl1 \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
