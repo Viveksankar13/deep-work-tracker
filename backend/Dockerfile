@@ -4,10 +4,10 @@ FROM python:3.10-slim
 # Install system dependencies required by OpenCV and MediaPipe
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libgl1-mesa-glx \
+    libgl1 \
+    libglx-mesa0 \
     libglib2.0-0 \
-    libgles2-mesa \
-    libgles2-mesa-dev \
+    libgles2 \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
