@@ -1,4 +1,4 @@
-# Deep Work Tracker
+# Deep Work Tracker Pro
 
 ## Prerequisites
 1. **Python 3.10+**
